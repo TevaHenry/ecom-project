@@ -3,8 +3,14 @@ import { connect } from 'react-redux'
 
 import FormInput from '../FormInput/FormInput';
 import CustomButton from '../CustomButton/CustomButton';
+
 import { googleSignInStart, emailSignInStart } from '../../redux/User/userActions';
-import './SignIn.scss';
+
+import {
+  SignInContainer, 
+  SignInTitle, 
+  ButtonsBarContainer
+} from './SignInStyles';
 
 const SignIn = ({ emailSignInStart, googleSignInStart }) => {
   const [ userCredentials, setUserCredentials ] = useState({ email: '', password: '' })
@@ -23,8 +29,8 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
   }
 
   return(
-    <div className="sign-in">
-      <h2 className='title'>I already have an account</h2>
+    <SignInContainer>
+      <SignInTitle>I already have an account</SignInTitle>
       <span>Sign in with your email and password</span>
       
       <form onSubmit={handleSubmit} >
@@ -44,12 +50,12 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
           label='password' 
           required 
         />
-        <div className="buttons">
+        <ButtonsBarContainer>
           <CustomButton type='submit'> Sign in </CustomButton>
           <CustomButton type='button' onClick={googleSignInStart} isGoogleSignIn> Sign in with Google </CustomButton>
-        </div>
+        </ButtonsBarContainer>
       </form>
-    </div>
+    </SignInContainer>
   )
 }
 
