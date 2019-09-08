@@ -4,7 +4,7 @@ import CollectionItem from '../../components/CollectionItem/CollectionItem';
 import { selectCollection } from '../../redux/Shop/shopSelectors';
 import { CollectionPageContainer, CollectionTitle, CollectionItemsContainer } from './CollectionPageStyles';
 
-const CollectionPage = ({ collection  }) => {
+export const CollectionPage = ({ collection  }) => {
   const { title, items } = collection;
   return (
     <CollectionPageContainer>

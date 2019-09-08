@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { withRouter } from 'react-router-dom';
+
 import CartItem from '../CartItem/CartItem';
 import { selectCartItems } from '../../redux/Cart/cartSelectors';
 import { toggleCartHidden } from '../../redux/Cart/cartActions';
@@ -12,7 +13,7 @@ import {
   EmptyMessageContainer
 } from './CartDropdownStyles';
 
-const CartDropdown = ({ cartItems, history, dispatch }) => (
+export const CartDropdown = ({ cartItems, history, dispatch }) => (
   <CartDropdownContainer>
     <CartItemsContainer>
       {

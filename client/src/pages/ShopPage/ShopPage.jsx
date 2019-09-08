@@ -5,18 +5,19 @@ import { connect } from 'react-redux';
 import { fetchCollectionsStart } from '../../redux/Shop/ShopActions';
 
 import Spinner from '../../components/Spinner/Spinner';
+import ShopPageContainer from './ShopPageStyles';
 
 const CollectionsOverviewContainer = lazy(() => import('../../components/CollectionsOverview/CollectionsOverviewContainer'));
 const CollectionPageContainer = lazy(() => import('../CollectionPage/CollectionPageContainer'));
 
-const ShopPage = ({ match, fetchCollectionsStart }) => {
+export const ShopPage = ({ match, fetchCollectionsStart }) => {
 
   useEffect(() => {
     fetchCollectionsStart()
   }, [fetchCollectionsStart])
 
   return (
-    <div className='shop-page'>
+    <ShopPageContainer>
       <Suspense fallback={<Spinner />}>
         <Route 
           exact 
@@ -28,7 +29,7 @@ const ShopPage = ({ match, fetchCollectionsStart }) => {
           component={CollectionPageContainer}
         />
       </Suspense>
-    </div>
+    </ShopPageContainer>
   )
 }
 

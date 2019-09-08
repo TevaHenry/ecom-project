@@ -13,7 +13,7 @@ import {
   CheckoutTotalContainer
 } from './CheckoutPageStyles';
 
-const CheckoutPage = ({ cartItems, cartTotal }) => (
+export const CheckoutPage = ({ cartItems, cartTotal }) => (
   <CheckoutPageContainer>
     <CheckoutHeaderContainer>
       <HeaderBlockContainer><span>Product</span></HeaderBlockContainer>

@@ -43,3 +43,5 @@ export const OptionLink = styled(Link)`
   text-transform: uppercase;
   cursor: pointer;
 `;
+
+OptionLink.displayName = 'OptionLink';
