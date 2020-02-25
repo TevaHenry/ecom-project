@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
+// const autumn = 'linear-gradient(to bottom, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%)'
+// const spring = 'linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)'
+
 export const MenuItemContainer = styled.div`
-	height: ${({ size }) => (size ? '380px' : '240px')}
-	min-width: 30%;
+	height: 75vh;
 	overflow: hidden;
 	flex: 1 1 auto;
 	display: flex;
@@ -11,12 +13,13 @@ export const MenuItemContainer = styled.div`
 	border: 1px solid black;
 	margin: 0 7.5px 15px;
 	overflow: hidden;
+  
 	&:hover {
 		cursor: pointer;
-		& .background-image {
+		/* & .background-image {
 			transform: scale(1.1);
 			transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-    }
+    } */
     
 		& .content {
 			opacity: 0.9;
@@ -32,7 +35,8 @@ export const MenuItemContainer = styled.div`
   }
 
   @media screen and (max-width: 800px) {
-    height: 200px;
+    height: 40vh;
+    min-width: 40%;
   }
 `;
 
@@ -43,7 +47,13 @@ export const BackgroundImageContainer = styled.div`
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  background-image: ${({ gradient }) => gradient};
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+  &:hover {
+    opacity: 1;
+    transition: opacity 0.8s ease-out;
+  }
 `;
 
 BackgroundImageContainer.displayName = 'BackgroundImageContainer';

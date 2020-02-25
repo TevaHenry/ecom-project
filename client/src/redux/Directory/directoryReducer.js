@@ -1,35 +1,27 @@
 const INITIAL_STATE = { 
   sections: [{
-    title: 'hats',
-    imageUrl: 'https://i.ibb.co/RP7xtyJ/hats.jpg',
+    title: 'summer',
+    gradient: 'linear-gradient(to bottom, #f6d365 0%, #fda085 100%)',
     id: 1,
-    linkUrl: 'shop/hats'
+    linkUrl: 'shop/summer'
   },
   {
-    title: 'jackets',
-    imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+    title: 'autumn',
+    gradient: 'linear-gradient(to bottom, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%)',
     id: 2,
-    linkUrl: 'shop/jackets'
+    linkUrl: 'shop/autumn'
   },
   {
-    title: 'sneakers',
-    imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+    title: 'winter',
+    gradient: 'linear-gradient(to top, #4facfe 0%, #00f2fe 100%)',
     id: 3,
-    linkUrl: 'shop/sneakers'
+    linkUrl: 'shop/winter'
   },
   {
-    title: 'womens',
-    imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-    size: 'large',
+    title: 'spring',
+    gradient: 'linear-gradient(to bottom, #d4fc79 0%, #96e6a1 100%)',
     id: 4,
-    linkUrl: 'shop/womens'
-  },
-  {
-    title: 'mens',
-    imageUrl: 'https://source.unsplash.com/k2T6qI1ZK1k/1600x900',
-    size: 'large',
-    id: 5,
-    linkUrl: 'shop/mens'
+    linkUrl: 'shop/spring'
   }]
 }
 
