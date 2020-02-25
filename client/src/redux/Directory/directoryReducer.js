@@ -1,7 +1,7 @@
 const INITIAL_STATE = { 
   sections: [{
     title: 'hats',
-    imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+    imageUrl: 'https://i.ibb.co/RP7xtyJ/hats.jpg',
     id: 1,
     linkUrl: 'shop/hats'
   },
@@ -26,7 +26,7 @@ const INITIAL_STATE = {
   },
   {
     title: 'mens',
-    imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+    imageUrl: 'https://source.unsplash.com/k2T6qI1ZK1k/1600x900',
     size: 'large',
     id: 5,
     linkUrl: 'shop/mens'
