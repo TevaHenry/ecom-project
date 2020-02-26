@@ -1,11 +1,18 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+
+import { ReactComponent as Summer } from '../../assets/minimalist-summer.svg';
+import { ReactComponent as Autumn } from '../../assets/minimalist-autumn.svg';
+import { ReactComponent as Winter } from '../../assets/minimalist-winter.svg';
+import { ReactComponent as Spring } from '../../assets/minimalist-spring.svg';
+
 import {
   MenuItemContainer,
   BackgroundImageContainer,
-  ContentContainer,
-  ContentTitle,
-  ContentSubtitle
+  IconContainer,
+  // ContentContainer,
+  // ContentTitle,
+  // ContentSubtitle
 } from './MenuItemStyles';
 
 export const MenuItem = ({ title, gradient, size, history, linkUrl, match }) => (
@@ -14,10 +21,20 @@ export const MenuItem = ({ title, gradient, size, history, linkUrl, match }) => 
     onClick={() => history.push(`${match.url}${linkUrl}`)} 
   >
     <BackgroundImageContainer className='background-image' gradient={gradient}/>
-    <ContentContainer className='content'>
+    <IconContainer>
+      {title === 'summer' 
+        ? <Summer className='icon'/>
+        : title === 'autumn'
+          ? <Autumn className='icon'/>
+          : title === 'winter'
+            ? <Winter className='icon'/>
+            : <Spring className='icon'/>
+        }
+    </IconContainer>
+    {/* <ContentContainer className='content'>
       <ContentTitle>{title.toUpperCase()}</ContentTitle>
       <ContentSubtitle>SHOP NOW</ContentSubtitle>
-    </ContentContainer>
+    </ContentContainer> */}
 </MenuItemContainer>
 )
 

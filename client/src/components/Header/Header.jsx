@@ -19,6 +19,7 @@ export const Header = ({ currentUser, hidden, signOutStart }) => (
   <HeaderContainer>
     <LogoContainer to="/">
       <Logo className='logo' />
+      {/* <h1>Seasons</h1> */}
     </LogoContainer>
     <OptionsContainer>
       <OptionLink to='/shop'>
