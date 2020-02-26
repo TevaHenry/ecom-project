@@ -5,7 +5,7 @@ const subColor = 'grey';
 const mainColor = 'black';
 
 const shrinkLabelStyles = css`
-  top: -14px;
+  top: -18px;
   font-size: 12px;
   color: ${mainColor};
 `;
@@ -20,19 +20,27 @@ export const GroupContainer = styled.div`
 
 export const FormInputContainer = styled.input`
   background: none;
-  background-color: white;
-  color: ${subColor};
+  /* background-color: white; */
+  /* color: ${subColor}; */
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
   width: 100%;
   border: none;
-  border-radius: 0;
-  border-bottom: 1px solid ${subColor};
+  border-radius: 6px;
+  /* border-bottom: 1px solid ${subColor}; */
   margin: 25px 0;
+  box-shadow:  inset 2px 2px 5px #BABECC, inset -5px -5px 10px #fff;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+
   &:focus {
+    box-shadow:  inset 1px 1px 2px #BABECC, inset -1px -1px 2px #fff;
     outline: none;
   }
+
   &:focus ~ label {
     ${shrinkLabelStyles}
   }

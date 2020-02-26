@@ -8,6 +8,7 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
+  text-shadow: 1px 1px 1px #fff;
 
   @media screen and (max-width: 800px) {
     height: 60px;
