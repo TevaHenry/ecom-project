@@ -6,6 +6,7 @@ export const HeaderContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 25px;
 
   @media screen and (max-width: 800px) {
@@ -16,20 +17,17 @@ export const HeaderContainer = styled.div`
 `;
 
 export const LogoContainer = styled(Link)`
-  height: 100%;
-  width: 70px;
-  padding: 25px;
-  /* display: flex;
-  align-items: center; */
+  text-transform: uppercase;
+  font-size: 2.5em;
 
-  @media screen and (max-width: 800px) {
+
+  /* @media screen and (max-width: 800px) {
     width: 50px;
-    padding: 0;
-  }
+  } */
 `;
 
 export const OptionsContainer = styled.div`
-  width: 50%;
+  width: 60%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -44,6 +42,17 @@ export const OptionLink = styled(Link)`
   padding: 10px 15px;
   text-transform: uppercase;
   cursor: pointer;
+  margin-right: 50px;
+
+  @media screen and (max-width: 800px) {
+    margin-right: 10px;
+  }
 `;
 
 OptionLink.displayName = 'OptionLink';
+
+export const CartIconContainer = styled.div`
+  border-radius: 50%;
+  background: #e4eef3;
+  box-shadow: ${({ pressed }) => pressed ? '10px 10px 15px #cbd4d8, -10px -10px 15px #fdffff' : 'inset 10px 10px 15px #cbd4d8, inset -10px -10px 15px #fdffff'};
+`;

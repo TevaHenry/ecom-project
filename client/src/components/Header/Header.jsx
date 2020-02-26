@@ -12,14 +12,14 @@ import {
   HeaderContainer, 
   LogoContainer, 
   OptionsContainer, 
-  OptionLink
+  OptionLink,
+  CartIconContainer
 } from './HeaderStyles';
 
 export const Header = ({ currentUser, hidden, signOutStart }) => (
   <HeaderContainer>
     <LogoContainer to="/">
-      <Logo className='logo' />
-      {/* <h1>Seasons</h1> */}
+      Seasons
     </LogoContainer>
     <OptionsContainer>
       <OptionLink to='/shop'>
@@ -34,7 +34,9 @@ export const Header = ({ currentUser, hidden, signOutStart }) => (
          ) : (
         <OptionLink to='/signin'>Sign in</OptionLink> 
       )}
-      <CartIcon />
+      <CartIconContainer pressed={hidden}>
+        <CartIcon />
+      </CartIconContainer>
     </OptionsContainer>
     {hidden ? null : <CartDropdown />}
   </HeaderContainer>

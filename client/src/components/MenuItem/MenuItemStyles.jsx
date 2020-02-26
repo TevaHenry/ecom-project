@@ -8,12 +8,11 @@ export const MenuItemContainer = styled.div`
 	justify-content: center;
   border-radius: 12px;
 	border: 1px solid rgba(255,255,255,0.20);
-  box-shadow:
-    -6px -6px 26px #ffffff,
-    6px 6px 16px #dedede;
 	margin: 0 7.5px 15px;
-	overflow: hidden;
+  overflow: hidden;
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow:  10px 10px 15px #cbd4d8, 
+             -10px -10px 15px #fdffff;
   
 	&:hover {
 		cursor: pointer;
